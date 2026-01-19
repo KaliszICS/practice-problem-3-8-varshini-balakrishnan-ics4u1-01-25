@@ -24,6 +24,8 @@ public class PracticeProblem {
 		return answer;
 	}
 	public static int minCostClimbingStairs(int[] cost) {
+		if (cost.length == 0) return 0;
+		if(cost.length == 1) return cost[0];
 		HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
 		int start0 = minCostHelper(0, cost, map);
 		int start1 = minCostHelper(1, cost, map);
