@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 public class PracticeProblem {
 
 	public static void main(String args[]) {
@@ -24,10 +26,10 @@ public class PracticeProblem {
 	public static int minCostClimbingStairs(int[] cost) {
 		HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
 		int start0 = minCostHelper(0, cost, map);
-		int start 1 = minCostHelper(1, cost, map);
+		int start1 = minCostHelper(1, cost, map);
 		return Math.min(start0, start1);
 	}
-	public static int minCostHelper(int index, int[] cost, HasmMap<Integer, Integer> map) {
+	public static int minCostHelper(int index, int[] cost, HashMap<Integer, Integer> map) {
 		if (index >= cost.length) {
 			return 0;
 		}
